@@ -13,5 +13,5 @@ var split = url.split(/\r|\n|\s/);
 console.log(split)
 
 if(url.split(/\r|\n|\s/).length>0){
-  console.log(true)
+  console.log(true);
 }
