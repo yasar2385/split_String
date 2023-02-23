@@ -15,8 +15,10 @@ if (url.split(/\r|\n|\s/).length > 1) {
   console.log(true);
 } else console.log(false);
 
-let key_year = '1990a';
+let key_year = '1991a demo';
 console.log(/(\d{4}?=.)|(\d{4})/.exec(key_year));
+console.log(key_year.match(/^\d{4}(?=\D{1,2})[A-z]{1,2}/g))
+
 key_year = key_year.replace(/.*\D(?=\d)|\D+$/g, '');
 console.log([key_year, key_year.length < 4, key_year.length > 5]);
 if (key_year.length < 4 || key_year.length > 5) key_year = 'XXXX';
