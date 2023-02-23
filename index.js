@@ -14,3 +14,10 @@ console.log(split);
 if (url.split(/\r|\n|\s/).length > 1) {
   console.log(true);
 } else console.log(false);
+
+let key_year = '1990a';
+console.log(/(\d{4}?=.)|(\d{4})/.exec(key_year));
+key_year = key_year.replace(/.*\D(?=\d)|\D+$/g, '');
+console.log([key_year, key_year.length < 4, key_year.length > 5]);
+if (key_year.length < 4 || key_year.length > 5) key_year = 'XXXX';
+console.log(key_year);
